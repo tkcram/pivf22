@@ -1,4 +1,4 @@
-<h1>Homework Week 2 - Scatterplot</h1>
+# Homework Week 2 - Scatterplot
 
 For this weeks homework, we were tasked with visualising a scatterplot in d3. This was created in two parts, the first to add the circle SVGs using a small, custom dataset. The second was to add databales based on the given dataset. As an additional exercise, design elements were experimented with, including colour and size. The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(2)scatterplot) and the output image is available below
 
