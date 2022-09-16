@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Homework Week 3</title>
+        <script type="text/javascript" src= "https://d3js.org/d3.v7.min.js"></script>
+        <style type="text/css">
+            h1 {
+              font-family: "Helvetica", "Arial", sans-serif;
+              font-size: 28px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>10 Most Frequently Occuring Lego Colours in 2020, by Total Count</h1>
+        <script type="text/javascript">
+                
+        const margin = 50;
+        const width = 750; 
+        const height = 500;   
+        
+        //Data
+        d3.csv("lego.csv").then(dataset => {
+        dataset.forEach(d => { 
+            d.Colour = d.Colour;
+            d.Count = +d.Count; 
+        });
+
+        //Scales
+        const maxY = d3.max(dataset, d => d.Count);
+
+        const xScale = d3.scaleBand()
+                        .domain(dataset.map(d => d.Colour))
+                        .range([margin, width - margin])
+                        .padding(.2);
+        
+        const yScale = d3.scaleLinear()
+                        .domain([0, maxY]) 
+                        .range([height - margin, margin]);
+        
+        const bottomAxis = d3.axisBottom()
+                            .scale(xScale)
+                            .tickSizeOuter(0);
+
+        const leftAxis = d3.axisLeft()
+                            .scale(yScale)
+                            .tickSizeOuter(0)
+                            .tickFormat(d3.format(".0s"));
+;
+
+        //SVG
+        const svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+        //Bars
+        svg.selectAll("rect") 
+            .data(dataset) 
+            .enter()
+            .append("rect")
+            .attr("x", d => xScale(d.Colour)) 
+            .attr("y", d => yScale(d.Count)) 
+            .attr("width", xScale.bandwidth())
+            .attr("height", d => (height-margin) - yScale(d.Count))
+            .attr("fill", d => d3.rgb(d.Code))
+            .attr("stroke","black");
+
+        //Axes
+        svg.append("g")
+            .attr("transform", "translate(0," + (height - margin) + ")") 
+            .call(bottomAxis); 
+
+        svg.append("g")
+            .attr("transform", "translate(" + margin + ",0)")
+            .call(leftAxis);         
+    });
+        </script>
+    </body>
+</html>
