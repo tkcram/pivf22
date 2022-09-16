@@ -1,6 +1,8 @@
 # Homework Week 3 - Barchart & CSV
 
-For this weeks homework, we were tasked with visualising a scatterplot in d3. This was created in two parts, the first to add the circle SVGs using a small, custom dataset. The second was to add databales based on the given dataset. As an additional exercise, design elements were experimented with, including colour and size. The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(2)scatterplot) and the output image is available below
+Description to come
 
-![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(2)scatterplot/scatterplot.png "Scatterplot") 
+[link to source code](https://github.com/tkcram/pivf22/tree/main/(3)barchart)
+
+![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(3)barchart/barchart.png) 
 
