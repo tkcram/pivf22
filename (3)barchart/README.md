@@ -6,7 +6,7 @@ For this week's homework, I created a barchart showing the the most frequently o
 2) The vertical axis was formatted to give the short form of the numbers (80k vs 80,000)
 3) Some minor style adjustments were made, such as removing the outermost tick mark.
 
-[link to source code](https://github.com/tkcram/pivf22/tree/main/(3)barchart)
+[Source code](https://github.com/tkcram/pivf22/tree/main/(3)barchart)
 
-![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(3)barchart/barchart.png) 
+![a simple bar chart](https://raw.githubusercontent.com/tkcram/pivf22/main/(3)barchart/barchart.png) 
 
