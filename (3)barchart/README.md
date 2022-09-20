@@ -8,5 +8,7 @@ For this week's homework, I created a barchart showing the the most frequently o
 
 [Source code](https://github.com/tkcram/pivf22/tree/main/(3)barchart)
 
+[Data](https://github.com/tkcram/pivf22/blob/main/(3)barchart/lego.csv)
+
 ![a simple bar chart](https://raw.githubusercontent.com/tkcram/pivf22/main/(3)barchart/barchart.png) 
 
