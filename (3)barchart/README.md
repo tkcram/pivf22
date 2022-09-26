@@ -1,6 +1,14 @@
-# Homework Week 2 - Scatterplot
+# Homework Week 3 - Barchart & CSV
 
-For this weeks homework, we were tasked with visualising a scatterplot in d3. This was created in two parts, the first to add the circle SVGs using a small, custom dataset. The second was to add databales based on the given dataset. As an additional exercise, design elements were experimented with, including colour and size. The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(2)scatterplot) and the output image is available below
+For this week's homework, I created a barchart showing the the most frequently occuring colours used for pieces in LEGO sets in 2021, a mouthful for which the title is still being workshopped. The chart is built up based on the template we used in class, using data provided by [Rebrickable](https://rebrickable.com/downloads/). A snapshot of the data was taken approximately a year ago for another project, and cajouled into giving three columns - Colour, a hex code representation of said colour, and total number of pieces for that colour. This was exported as a CSV, and loaded directly into the D3 code. From there, the following modifications were made to the template: 
 
-![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(2)scatterplot/scatterplot.png "Scatterplot") 
+1) The bars were given a fill using the hex code in the data, and a stroke to ensure colours such as 'white' were legible. 
+2) The vertical axis was formatted to give the short form of the numbers (80k vs 80,000)
+3) Some minor style adjustments were made, such as removing the outermost tick mark.
+
+[Source code](https://github.com/tkcram/pivf22/tree/main/(3)barchart)
+
+[Data](https://github.com/tkcram/pivf22/blob/main/(3)barchart/lego.csv)
+
+![a simple bar chart](https://raw.githubusercontent.com/tkcram/pivf22/main/(3)barchart/barchart.png) 
 
