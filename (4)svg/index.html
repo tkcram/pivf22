@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src= "https://d3js.org/d3.v7.min.js"></script>
+	<style type="text/css">
+		.title{
+			font-size: 24px;
+			font-weight: bold;
+			font-family: sans-serif;
+		}
+		.labels{
+			font-size: 11;
+		}
+	</style>
+
+</head>
+<body>
+	<svg width="600" height="500"></svg>
+
+	<script type="text/javascript">
+
+		d3.csv("water_consumption.csv").then(dataset => {
+
+			const droplet = ["M5,15 C 0,-4 40,-4, 35,15 C 31,25 22.5,25 20,40 C 17.5,25 9,25 5,15"]
+
+			const size = 75;
+			const sizeY = 85;
+			const svg = d3.select("svg");
+
+			const g = svg.selectAll("g")
+			.data(dataset)
+			.enter()
+			.append("g")
+			.attr("transform", (d,i)=>{
+				const x = ((i % 7)+0.5) * size; 
+				const y = (Math.floor(i/7)+1)*sizeY;
+				return "translate(" + [x,y] + ")";})
+
+			g.append("path")
+			.attr("d", droplet)
+			.attr("fill", "blue")
+			.attr("transform","rotate(180, 20, 20)")
+			.attr("width","100");
+
+			g.append("rect")
+			.attr("width","40")
+			.attr("height",(d)=>{return (1-(+d.water/8))*40})
+			.attr("fill","white");
+
+			g.append("path")
+			.attr("d", droplet)
+			.attr("stroke", "blue")
+			.attr("fill","none")
+			.attr("transform","rotate(180, 20, 20)");
+
+			g.append("text")
+			.attr("x", size/4) 
+			.attr("y", size*0.75)
+			.attr("text-anchor", "middle")
+			.attr("dx", "2px")
+			.attr("dy", "5px")
+			.attr("class","labels")
+			.text(d=>d.date.slice(0,-3));
+
+			svg.append("text")
+			.attr("x", 300) 
+			.attr("y", 40) 
+			.attr("text-anchor", "middle")
+			.attr("fill", "blue")
+			.attr("class", "title")
+			.text("Has Tk Been Drinking 8 Glasses of Water a Day?");
+
+		});
+	</script>
+</body>
+</html>
