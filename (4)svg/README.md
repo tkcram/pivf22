@@ -1,4 +1,4 @@
-# Homework Week 3 - SVG
+# Homework Week 4 - SVG
 
 The Data: Data was collected from personal records based on water consumption for the month of August 2022. It ranged from zero glasses and maxed at 8 (even if actual consumption was higher).
 
