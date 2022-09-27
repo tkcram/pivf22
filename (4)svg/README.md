@@ -6,5 +6,5 @@ The Viz: SVG water drop icons were created and layed out in rows of seven, as if
 
 The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(4)svg) and the output image is available below
 
-![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(4)svg/watersvg.png "waterplot") 
+![a simple water chart using SVGs](https://raw.githubusercontent.com/tkcram/pivf22/main/(4)svg/watersvg.png "waterplot") 
 
