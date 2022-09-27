@@ -1,6 +1,10 @@
-# Homework Week 2 - Scatterplot
+# Homework Week 3 - SVG
 
-For this weeks homework, we were tasked with visualising a scatterplot in d3. This was created in two parts, the first to add the circle SVGs using a small, custom dataset. The second was to add databales based on the given dataset. As an additional exercise, design elements were experimented with, including colour and size. The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(2)scatterplot) and the output image is available below
+The Data: Data was collected from personal records based on water consumption for the month of August 2022. It ranged from zero glasses and maxed at 8 (even if actual consumption was higher).
 
-![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(2)scatterplot/scatterplot.png "Scatterplot") 
+The Viz: SVG water drop icons were created and layed out in rows of seven, as if to represent the days of the week. Another SVG was overlayed on top in order cover a certain proportion of the image, giving the illusion that the droplet is filled proportional to the amount of water consumed.
+
+The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(4)svg) and the output image is available below
+
+![a simple scatter plot](https://raw.githubusercontent.com/tkcram/pivf22/main/(4)svg/watersvg.png "waterplot") 
 
