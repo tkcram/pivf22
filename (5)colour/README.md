@@ -24,5 +24,5 @@ The viz was created in D3 using what essentially amounts to a nested for-loop. F
 
 The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(5)colour) and the output image is available below
 
-![A representation of musical chords as colours](https://raw.githubusercontent.com/tkcram/pivf22/main/(5)colour/colour.png) ("Colour of music") 
+![A representation of musical chords as colours](https://raw.githubusercontent.com/tkcram/pivf22/main/(5)colour/colour.png "Colour of music") 
 
