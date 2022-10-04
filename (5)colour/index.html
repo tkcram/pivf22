@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src= "https://d3js.org/d3.v7.min.js"></script>
+    <style type="text/css"> 
+
+        h1{
+           margin-left: 30px; 
+           font-family: sans-serif;
+        }
+
+        .labels{
+            text-color: blue;
+        }
+
+        svg{
+            width:500px;
+            height:60px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The Colour of Music</h1>
+    <div id='rbg'></div>
+    <!-- <svg id='hsl'></svg> -->
+
+    <script type="text/javascript">
+
+        const chordList = {}
+
+        d3.csv("chords.csv").then(chords => {
+            chords.forEach(d => { 
+                chordList[d.chord]=[d.note1,d.note2,d.note3]
+            });
+        });
+
+        d3.csv("songs.csv").then(dataset => {
+            dataset.forEach(d => console.log(d));
+
+            const svg = d3.select("#rbg");
+            const w = 40;
+            const size = 40;
+
+
+            const notes = ['Ab','A','Bb','B','C','C#','Db','D','D#','Eb','E','F','F#','Gb','G','G#']
+
+            const binaryScale = d3.scaleLinear()
+            .domain ([0,notes.length])
+            .range ([0,255]);
+
+            svg.selectAll("svg")
+            .data(dataset)
+            .enter()
+            .append("svg")
+
+            .selectAll("rect")
+            .data(function (d) { return [d.chord1, d.chord2, d.chord3, d.chord4, d.chord5] })
+            .enter()
+            .append("rect")
+            .attr("x", (d,i) => i * (w) + 150)
+            .attr("y", 0)
+            .attr("width", 40)
+            .attr("height", 40)
+            .style("fill", d => 
+                d3.rgb(
+                    binaryScale(notes.indexOf(chordList[d][0])),
+                    binaryScale(notes.indexOf(chordList[d][1])),
+                    binaryScale(notes.indexOf(chordList[d][2]))
+                    )
+                )
+
+            svg.selectAll("svg")
+            .append("text")
+            .attr("x", size*2) 
+            .attr("y", size*0.5)
+            .attr("text-anchor", "middle")
+            .attr("class","labels")
+            .text(d=> d.song);
+
+            svg.selectAll("svg")
+            .append("text")
+            .attr("x", size*2) 
+            .attr("y", size*0.9)
+            .attr("text-anchor", "middle")
+            .attr("class","labels")
+            .text(d=> d.artist);
+        });
+    </script>
+</body>
+</html>
