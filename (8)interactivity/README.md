@@ -13,6 +13,6 @@ The viz is laid out in a 3x3 grid in order to demonstrate the proof of concept. 
 
 The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(8)interactivity) and the output image is available below
 
-![The viz pre-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(8)interactivity/interactivity_before.png) "Before Interaction") 
+![The viz pre-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(8)interactivity/interactivity_before.png "Before Interaction") 
 
-![The viz post-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(8)interactivity/interactivity_after.png) "After Interaction") 
+![The viz post-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(8)interactivity/interactivity_after.png "After Interaction") 
