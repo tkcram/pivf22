@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title goes here</title>
+    <script src= "https://d3js.org/d3.v7.min.js"></script>
+    <style type="text/css">  
+
+        svg{
+          width:1000px;
+          height:500px;
+      }
+
+  </style>
+</head>
+<body>
+    <svg></svg>
+
+    <script type="text/javascript">
+
+        const w = 1000;
+        const h = 500;
+
+        // const dataset = [1,2,3,4,5,6,7,8,9];
+        const dataset = [];
+        for (let i = 1; i <= 9; i++) {
+            dataset.push(i);
+        }
+        
+        let filtered = []
+
+        let filteredArray = dataset.filter(value => !filtered.includes(value));
+
+        const svg = d3.select("svg");
+
+        let colours = (dset) => d3.scaleLinear()
+        .domain([d3.min(dset),d3.max(dset)])
+        .range(["yellow", "red"])
+
+        const squares = svg.selectAll("rect")
+        .data(dataset)
+        .enter()
+        .append("rect")
+        .attr("x", (d,i) => i%3 * (w/dataset.length)+20)
+        .attr("y", (d,i) => (Math.floor(i/3)+1) * (w/dataset.length))
+        .attr("width","100")
+        .attr("height","100")
+        .attr("fill", d => colours(dataset)(d))
+        .attr("stroke","black")
+        .on("click", (event,d) => {
+            const selected = event.currentTarget;
+
+            if (selected.getAttribute("fill") == "white"){
+                filtered.splice(filtered.indexOf(d), 1)
+            } else {
+                selected.setAttribute('fill', "white")
+                filtered.push(d);
+            }
+
+            squares.filter(d2 => !(filtered.includes(d2)))
+            .attr("fill",d2 => colours(dataset.filter(value => !filtered.includes(value)))(d2))
+        })
+    </script>
+</body>
+</html>
