@@ -1,4 +1,4 @@
-# Homework Week 8 - Interactivity
+# Homework Week 10 - Hierarchy
 
 ## The Concept
 For this week's homework, the goal was to recreate an existing tree cluster diagram. The original, found [here](https://www.harmony.org.uk/book/examples/fg_1p1p3.gif), is a specifc type of cluster tree diagram used in linguistic called a [phrase-structure diagram](https://en.wikipedia.org/wiki/Phrase_structure_rules). These diagrams are used to demonstrate that sentences are ordered and structured in meaningful ways, and were some of the earliest attempts at a universal grammar.
@@ -13,6 +13,6 @@ The code to create the viz is reasonably standard, follwing the link/edge struct
 
 ## Links
 
-The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(9)hierarchy) and the output image is available below
+The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(10)hierarchy) and the output image is available below
 
-![The viz pre-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(9)interactivity/sentence.png) 
+![The viz pre-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(10)interactivity/sentence.png) 
