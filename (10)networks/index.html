@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tree</title>
+    <script src= "https://d3js.org/d3.v7.min.js"></script>
+    <style type="text/css">
+
+        .links {
+            stroke: black;
+            stroke-width: .5px;
+            fill: none;
+        }
+
+        .nodes {
+            fill: white;
+            stroke-width:.5px;
+        }
+
+        .leaf{
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <svg width="1000" height="600"></svg>
+    <script type="text/javascript">
+
+            const svg = d3.select("svg")
+            .append("g")
+            .attr("transform", "translate(20,20)");
+
+            const w = 1000;
+            const h= 600; 
+
+            d3.json("sentence.json").then(dataset => {
+
+            //tree
+            const tree = d3.cluster()
+            .size([w-100, h-100]);
+
+            const root = d3.hierarchy(dataset);
+            tree(root);
+
+            //edges
+            const links = svg.selectAll("line")
+            .data(root.links())
+            .enter()
+            .append("line")
+            .classed("links", true)
+            .attr("x1", d=> d.source.x)
+            .attr("y1", d=> d.source.y)
+            .attr("x2",d=> d.target.x)
+            .attr("y2", d=>d.target.y);
+
+            //nodes 
+            const nodes = svg.selectAll("rect")
+            .data(root.descendants())
+            .enter()
+            .append("rect")
+            .classed("nodes", true)
+            .attr("x", d=>d.x - 40)
+            .attr("y", d=>d.y - 10)
+            .attr("width", 80)
+            .attr("height", 20);
+
+            const text = svg.selectAll("text")
+            .data(root.descendants())
+            .enter()
+            .append("text")
+            .attr("transform", d=> `translate(${d.x},${d.y + 2.5})`)
+            .attr("text-anchor", "middle")
+            .attr("class", d=> !d.children ? "leaf" : "")
+            .text(d=> d.data.id)
+
+        })
+
+    </script>
+</body>
+</html>

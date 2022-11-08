@@ -1,0 +1,146 @@
+{
+    "id": "Conjoined Sentence",
+    "children": [
+        {
+            "id": "Sentence",
+            "children": [
+                {
+                    "id": "NP",
+                    "children": [
+                        {
+                            "id": "NP",
+                            "children": [
+                                {
+                                    "id": "Art.",
+                                    "children": [
+                                        {
+                                            "id": "The"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "N",
+                                    "children": [
+                                        {
+                                            "id": "boy"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "PP",
+                            "children": [
+                                {
+                                    "id": "Prep.",
+                                    "children": [
+                                        {
+                                            "id": "with"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "NP",
+                                    "children": [
+                                        {
+                                            "id": "Adj.",
+                                            "children": [
+                                                {
+                                                    "id": "red"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "N",
+                                            "children": [
+                                                {
+                                                    "id": "shorts"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "VP",
+                    "children": [
+                        {
+                            "id": "Verb",
+                            "children": [
+                                {
+                                    "id": "kicked"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "NP",
+                            "children": [
+                                {
+                                    "id": "Art.",
+                                    "children": [
+                                        {
+                                            "id": "the"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "Art.",
+                                    "children": [
+                                        {
+                                            "id": "ball"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "Conj.",
+            "children": [
+                {
+                    "id": "and"
+                }
+            ]
+        },
+        {
+            "id": "VP",
+            "children": [
+                {
+                    "id": "Verb",
+                    "children": [
+                        {
+                            "id": "scored"
+                        }
+                    ]
+                },
+                {
+                    "id": "NP",
+                    "children": [
+                        {
+                            "id": "Art.",
+                            "children": [
+                                {
+                                    "id": "a"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "N",
+                            "children": [
+                                {
+                                    "id": "goal"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
