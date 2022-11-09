@@ -13,6 +13,6 @@ The code to create the viz is reasonably standard, follwing the link/edge struct
 
 ## Links
 
-The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(10)hierarchy) and the output image is available below
+The source code is available [here](https://github.com/tkcram/pivf22/tree/main/(10)networks) and the output image is available below
 
-![The viz pre-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(10)interactivity/sentence.png) 
+![The viz pre-interaction](https://raw.githubusercontent.com/tkcram/pivf22/main/(10)networks/sentence.png) 
